@@ -1,6 +1,7 @@
 # Benchtop Power Supply
 What better way to get back in to work with your own personal benchtop power supply.  Uses a LM317 for power output and provides a separate 5V rail. You will need a power supply rated higher than what you want to power ( use laptop power supply if you have one)									
 
+# Bill of Materials
 |Qty| Code | Description |
 |---|---|---|
 |1 | [HB6011](http://jaycar.com.au/p/HB6011) | Jiffy Box enclosure
