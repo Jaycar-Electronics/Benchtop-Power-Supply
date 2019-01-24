@@ -1,5 +1,11 @@
 # Benchtop Power Supply
-What better way to get back in to work with your own personal benchtop power supply.  Uses a LM317 for power output and provides a separate 5V rail. You will need a power supply rated higher than what you want to power ( use laptop power supply if you have one)									
+What better way to get back in to work with your own personal benchtop power supply.  Uses a LM317 for power output and provides a separate 5V rail.
+
+You will need a power supply higher than 7V to power this unit, and it will only be able to power up to 2V less than the power you give it.
+
+###### Example
+* If you want to have an adjustable 2-28V supply, you will have to use a 30V power supply.
+* If you give it a 17V power supply, it will be adjustable between 2V and 15V.
 
 # Bill of Materials
 |Qty| Code | Description |
@@ -8,7 +14,7 @@ What better way to get back in to work with your own personal benchtop power sup
 |1 | [ZV1615](http://jaycar.com.au/p/ZV1615) | 2-30V adjustable voltage regulator
 |1 | [ZV1505](http://jaycar.com.au/p/ZV1505) | 5V+ voltage regulator
 |2 | [HH8516](http://jaycar.com.au/p/HH8516) | TO220 Heatsink
-|1 | [HP9552](http://jaycar.com.au/p/HP9552) | experimenters PCB
+|1 | [HP9550](http://jaycar.com.au/p/HP9550) | experimenters PCB
 |1 | [NM2010](http://jaycar.com.au/p/NM2010) | Heatsink Compound
 |1 | [QP5580](http://jaycar.com.au/p/QP5580) | LED Voltage Panel Meter
 |1 | [ST0335](http://jaycar.com.au/p/ST0335) | Mini toggle switch
@@ -22,15 +28,17 @@ What better way to get back in to work with your own personal benchtop power sup
 
 * You will also need some wires to connect different components together, if you don't have it already, the [WH3009 8 Colour pack](http://jaycar.com.au/p/WH3009) is a good choice to have in your workshop.
 
-* [WT5320 Banana lead to Alligator clips](http://jaycar.com.au/p/WT5320) is a great addition for this project as you can start using it right away once you've finished
+* [WT5320 Banana lead to Alligator clips](http://jaycar.com.au/p/WT5320) is a great addition for this project as you can start using it right away once you've finished.
+
+* Good Power supply design includes fuses ([SF2160](http://jaycar.com.au/p/SF2160)) and fuse holders ([SZ2028](http://jaycar.com.au/p/SZ2028)), however this is simply more as a guide to get your feet wet; If you want to include fuses, wire them inline right between the switch and DC socket.
 
 # Connections
 
 ![](images/schematic.png)
 
-The basic Connections are as above. You're simply setting up two regulators from the same power supply, and having a common ground connection going through to the front panel.
+The basic connections are as above. You're simply setting up two regulators from the same power supply, and having a common ground connection going through to the front panel. The QP panel meter will measure the voltage on the LM317 so that you have feedback on what voltage you're providing.
 
-We've tried to make a fritizing diagram to make the idea simplier to transfer to the PCB board but the fritizing software is still a little buggy.
+We've tried to make a fritizing diagram to make the idea easier to transfer to the PCB board.
 
 ![](images/fritz.png)
 
@@ -83,14 +91,15 @@ As you could already see, ours turned out like this, with a DC jack coming from 
 
 ![](images/outside.jpg)
 
-When connecting up the circuit board, be sure not to short any wires and to keep the voltages different. Test the voltages you get from the regulators before you continue on placing everything in, as it will be easier to fix problems now, rather than later.
+When connecting up the circuit board, make sure no part of the circuit is touching any other part it shouldn't; shorting these components have the potential to cause a bit of a bang.
 
-Once the regulators are regulating, you can then attach wires from the outputs, going towards the QP addon board:
+Once the minimal circuit is connected up, Test the voltages you get from the regulators before you continue on placing everything in, as it will be easier to fix problems now, rather than later.
+
+Once the regulators are regulating, you can then attach wires from the outputs to the QP addon board as shown:
 
 ![](images/addon.jpg)
 
-You also need to bridge solder over the `20V` and the `DP2` pads. this is so the module knows what it is displaying and we know what it's reading.
-
+You also need to bridge solder over the `20V` and the `DP2` pads. this is so the module knows what it is displaying and we know what it's reading. We've made little MS-paint solder so you can see.
 
 Then, finally, connect the DC socket, Switch, Banana sockets, Panel Meter and potentiometer. Here's a block diagram to help you figure out how it all comes together
 
@@ -102,4 +111,4 @@ Unfortunately we didn't have much planning before we built this, so our final re
 
 ## Use
 
-Simply flick the unit on, adjust it to the voltage required, and plug in your banana leads. If you want attach a knob, simply cut down the size of the potentiometer. 
+Simply flick the unit on, adjust it to the voltage required, and plug in your banana leads. If you want attach a knob, simply cut down the size of the potentiometer.
