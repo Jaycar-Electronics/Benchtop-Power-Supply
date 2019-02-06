@@ -101,6 +101,10 @@ Once the regulators are regulating, you can then attach wires from the outputs t
 
 You also need to bridge solder over the `20V` and the `DP2` pads. this is so the module knows what it is displaying and we know what it's reading. We've made little MS-paint solder so you can see.
 
+When the LCD Panel is mounted to the chassis, the addon module connects directly onto the pins of the LCD module, using the shorter row of pins, and being the leftmost pin.
+
+![](images/panelcon.jpg)
+
 Then, finally, connect the DC socket, Switch, Banana sockets, Panel Meter and potentiometer. Here's a block diagram to help you figure out how it all comes together
 
 ![](images/block.png)
